@@ -8,13 +8,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using GIEXPERTCONTROLLib;
+
 namespace ShinhanTools
 {
-    public partial class Form1 : Form
+    public partial class ShinhanTools : Form
     {
-        public Form1()
+        GiExpertControl control = new GiExpertControl();
+
+        public ShinhanTools()
         {
             InitializeComponent();
+            
         }
+
     }
 }
