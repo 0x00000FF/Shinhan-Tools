@@ -43,6 +43,16 @@ namespace ShinhanTools
             var pw = userPw.Text;
             var cp = userCertiPw.Text;
 
+
+            if (string.IsNullOrEmpty(id.Trim()) ||
+                string.IsNullOrEmpty(pw.Trim()) ||
+                string.IsNullOrEmpty(cp.Trim()) )
+            {
+                MessageBox.Show("모든 정보를 정확하게 입력하여 주십시오.");
+                return;
+            }
+
+
             if (!File.Exists(indiPath) && dialog.ShowDialog() == DialogResult.OK)
             {
                 indiPath = dialog.FileName;
@@ -63,6 +73,13 @@ namespace ShinhanTools
         private void aboutButton_Click(object sender, EventArgs e)
         {
             control.AboutBox();
+        }
+
+        private void ShinhanToolsLogin_Shown(object sender, EventArgs e)
+        {
+            userId.Clear();
+            userPw.Clear();
+            userCertiPw.Clear();
         }
     }
 }

@@ -64,6 +64,7 @@
             // 
             // doLoginButton
             // 
+            this.doLoginButton.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.doLoginButton.Location = new System.Drawing.Point(97, 91);
             this.doLoginButton.Name = "doLoginButton";
             this.doLoginButton.Size = new System.Drawing.Size(132, 26);
@@ -111,6 +112,7 @@
             // 
             // ShinhanToolsLogin
             // 
+            this.AcceptButton = this.doLoginButton;
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(318, 129);
             this.Controls.Add(this.label3);
@@ -127,6 +129,7 @@
             this.Name = "ShinhanToolsLogin";
             this.Text = "ShinhanToolsLogin";
             this.Load += new System.EventHandler(this.ShinhanToolsLogin_Load);
+            this.Shown += new System.EventHandler(this.ShinhanToolsLogin_Shown);
             this.ResumeLayout(false);
             this.PerformLayout();
 
